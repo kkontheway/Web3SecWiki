@@ -67,10 +67,10 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Web3Note',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.ico',
         },
         items: [
           {
@@ -103,7 +103,7 @@ const config = {
             position: "left",
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/kkontheway/SolidityNote',
             label: 'GitHub',
             position: 'right',
           },
