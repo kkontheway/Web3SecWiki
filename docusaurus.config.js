@@ -10,7 +10,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'My Web3 Learning Book',
   tagline: 'Born2Be',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -70,7 +70,7 @@ const config = {
         title: 'Web3Note',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.ico',
+          src: 'img/logo.png',
         },
         items: [
           {
