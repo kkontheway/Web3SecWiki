@@ -1,0 +1,4 @@
+---
+title: DelegateCall
+---
+# Test
