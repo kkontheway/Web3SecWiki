@@ -34,6 +34,7 @@ const config = {
     locales: ['en', 'zh-CN'],
   },
 
+
   presets: [
     [
       'classic',
@@ -161,6 +162,8 @@ const config = {
         additionalLanguages: ['solidity'],
       },
     }),
+
 };
+
 
 export default config;
