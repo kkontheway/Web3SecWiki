@@ -277,26 +277,31 @@ https://blog.nomic.foundation/malicious-backdoors-in-ethereum-proxies-62629adf33
 https://proxies.yacademy.dev/pages/security-guide/
 
 ## 4.Metamorphic Contract Rug Vulnerability
-CREATE2 操作码是在君士坦丁堡硬分叉中通过 EIP-1014 引入的。与 CREATE 操作码不同，它允许将合约部署在可以提前计算的地址。可以部署一个合约，用 selfdestruct 销毁合约，然后在与原始合约相同的地址部署一个具有不同代码的新合约。如果用户不知道该地址的代码自最初与合约交互以来发生了变化，他们最终可能会与恶意合约进行交互。计划删除 EIP-4758 中的 selfdestruct 操作码将消除未来创建变质合约的能力。
+`CREATE2` 操作码是在君士坦丁堡硬分叉中通过 `EIP-1014` 引入的。与 `CREATE` 操作码不同，它允许将合约部署在可以提前计算的地址。可以部署一个合约，用 `selfdestruct` 销毁合约，然后在与原始合约相同的地址部署一个具有不同代码的新合约。如果用户不知道该地址的代码自最初与合约交互以来发生了变化，他们最终可能会与恶意合约进行交互。计划删除 `EIP-4758` 中的 `selfdestruct` 操作码将消除未来创建变质合约的能力。
 
 ### Example
 https://ethereum-magicians.org/t/potential-security-implications-of-create2-eip-1014/2614
+https://github.com/pcaversaccio/tornado-cash-exploit
 
 ## 5.Delegatecall with Selfdestruct Vulnerability
 当delegatecall和selfdestruct一起使用的时候，就会出现一些意外。比如当合约A有一个到合约B的delegatecall并且合约B中有selfdestruct的时候，那么合约A会被销毁。
 
 所以如果遇到一个合约具有硬编码目标合约的delegatecall的时候，需要检查目标合约是否包含selfdestruct。如果目标合约不包含 selfdestruct 但包含 delegatecall ，则检查委托给的合约是否有 selfdestruct ，如果目标合约中有 selfdestruct ，则包含 delegatecall 的原始合约可能会被销毁。如果用于 EIP-1167 克隆的主合约被自毁，则从此合约创建的所有克隆都将停止工作。
 
-## Example
+### Example
 1. Ethernaut Level25
 2. Paradigm 2021 Vault
 
+### Refer
+https://forum.openzeppelin.com/t/uupsupgradeable-vulnerability-post-mortem/15680
+
 ## 6.Delegatecall to Arbitrary
 `delegatecall` 将执行从代理合约传递到另一个合约，但使用代理合约中的状态变量和上下文（`msg.sender、msg.value`）。如果 `delegatecall` 传递执行的执行合约可以是任意合约，则会出现实质性问题。其一，将 `delegatecall` 与 `selfdestruct` 组合起来可能会导致拒绝服务。另一个风险是，如果用户使用了 `approve` 或设置了允许将包含 `delegatecall` 的代理合约信任到任意地址，则任意 `delegatecall` 目标可能会被用于窃取用户资金。 `delegatecall` 合约将执行转移到的地址必须是受信任的合约，并且不能是开放式的，以允许用户提供要委托的地址。
+
 ## 7.Delegatecall external contract missing existence check
 当使用 delegatecall 时，不会自动检查外部合约是否存在。如果调用的外部合约不存在，则返回值为 true 。 Solidity 文档中的警告注释中记录了这一点，其中包含以下内容：
 > The low-level functions call, delegatecall and staticcall return true as their first return value if the account called is non-existent, as part of the design of the EVM. Account existence must be checked prior to calling if needed.
 
-## Summary
 
-## Reference
+## Refer
+https://proxies.yacademy.dev/
