@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Foundry
 ---
 
-# Test
+# Foundry
+
