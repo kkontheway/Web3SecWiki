@@ -8,10 +8,10 @@ sidebar_position: 1
 
 ## Update Record
 - 2024/3/20
-  - Tools-Foundry_Test
-  - Solidity-Application_MultiSigWallet
-  - Solidity-Application_ERC-173
-  - Solidity-Application_ERC-2771
+  - [Tools-Foundry_Test](https://kkweb3doc.vercel.app/Web3tools/Foundry/Test)
+  - [Solidity-Application_MultiSigWallet](https://kkweb3doc.vercel.app/solidity/Application/MultiWallet)
+  - [Solidity-Application_ERC-173](https://kkweb3doc.vercel.app/solidity/Application/ERC173)
+  - [Solidity-Application_ERC-2771](https://kkweb3doc.vercel.app/solidity/Application/ERC2771)
 - 2024/3/19
   - [CTF-Ethernaut_Level6](https://kkweb3doc.vercel.app/ctf/Ethernaut/Level-6)
   - [Solidity-Basic_StorageLayout](https://kkweb3doc.vercel.app/solidity/Basic/StorageLayout)
