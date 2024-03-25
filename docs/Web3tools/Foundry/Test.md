@@ -46,3 +46,5 @@ function setUp() public {
     }
 ```
 Refer:https://twitter.com/RightNowIn/status/1761094201071002000
+
+https://rareskills.io/post/invariant-testing-solidity

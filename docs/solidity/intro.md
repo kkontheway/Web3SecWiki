@@ -7,6 +7,14 @@ sidebar_position: 1
 
 
 ## Update Record
+- 2024/3/24
+  - How To Defi
+  - Check Effect Pattern
+  - Events
+- 2024/3/23
+  - Weak Random
+  - DDos Attack
+  - Solidity-Basic_DataLocation
 - 2024/3/20
   - [Tools-Foundry_Test](https://kkweb3doc.vercel.app/Web3tools/Foundry/Test)
   - [Solidity-Application_MultiSigWallet](https://kkweb3doc.vercel.app/solidity/Application/MultiWallet)

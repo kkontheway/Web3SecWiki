@@ -1,0 +1,1 @@
+https://www.rareskills.io/post/gas-optimization#viewer-1v56l
