@@ -38,7 +38,7 @@ function sendETH(address payable _to, uint256 amount) external payable{
 }
 ```
 ## Call
-- 用法是接收方地址.call{value: 发送ETH数额}("")。
+- 用法是接收方地址`.call{value: 发送ETH数额}("")`。
 - call()没有gas限制，可以支持对方合约fallback()或receive()函数实现复杂逻辑。
 - call()如果转账失败，不会revert。
 - call()的返回值是(bool, data)，其中bool代表着转账成功或失败，需要额外代码处理一下。
