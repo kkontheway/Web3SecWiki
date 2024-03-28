@@ -7,6 +7,8 @@ sidebar_position: 1
 
 
 ## Update Record
+- 2024/3/28
+  - Create2
 - 2024/3/27
   - BypassContractCheck
   - Msg.value in a Loop
