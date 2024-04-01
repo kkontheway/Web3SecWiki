@@ -7,10 +7,18 @@ sidebar_position: 1
 
 
 ## Update Record
+- 2024/4/2
+  - Proxy Attack(Update)
+  - Basic EVM
+  - Reentrancy
+  - Access Control Vulnerability
+  - Bridge-Security
+  - metadata
+  - What is ABI ?
 - 2024/4/1
   - SignatureReply
+  - Inheritance
   - NFTReentrancy
-  - Access Control Vulnerability
 - 2024/3/29
   - What is Huff
   - What is Yul
