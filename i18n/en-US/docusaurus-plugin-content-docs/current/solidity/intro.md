@@ -9,6 +9,8 @@ sidebar_position: 1
 ## Update Record
 - 2024/4/1
   - SignatureReply
+  - NFTReentrancy
+  - Access Control Vulnerability
 - 2024/3/28
   - [Create2](https://kkweb3doc.vercel.app/solidity/Basic/Create2)
 - 2024/3/27
