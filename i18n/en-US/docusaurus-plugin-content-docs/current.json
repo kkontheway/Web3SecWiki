@@ -1,0 +1,62 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.Solidity.category.ABI": {
+    "message": "ABI",
+    "description": "The label for category ABI in sidebar Solidity"
+  },
+  "sidebar.Solidity.category.Application": {
+    "message": "Application",
+    "description": "The label for category Application in sidebar Solidity"
+  },
+  "sidebar.Solidity.category.Assembly&FV": {
+    "message": "Assembly&FV",
+    "description": "The label for category Assembly&FV in sidebar Solidity"
+  },
+  "sidebar.Solidity.category.Basic": {
+    "message": "Basic",
+    "description": "The label for category Basic in sidebar Solidity"
+  },
+  "sidebar.Solidity.category.Defi": {
+    "message": "Defi",
+    "description": "The label for category Defi in sidebar Solidity"
+  },
+  "sidebar.Solidity.category.UniswapV2": {
+    "message": "UniswapV2",
+    "description": "The label for category UniswapV2 in sidebar Solidity"
+  },
+  "sidebar.Solidity.category.UniswapV3": {
+    "message": "UniswapV3",
+    "description": "The label for category UniswapV3 in sidebar Solidity"
+  },
+  "sidebar.Solidity.category.Proxy": {
+    "message": "Proxy",
+    "description": "The label for category Proxy in sidebar Solidity"
+  },
+  "sidebar.Web3Tools.category.Foundry": {
+    "message": "Foundry",
+    "description": "The label for category Foundry in sidebar Web3Tools"
+  },
+  "sidebar.CTF.category.BlazCTF": {
+    "message": "BlazCTF",
+    "description": "The label for category BlazCTF in sidebar CTF"
+  },
+  "sidebar.CTF.category.DamnVulnerableDefi": {
+    "message": "DamnVulnerableDefi",
+    "description": "The label for category DamnVulnerableDefi in sidebar CTF"
+  },
+  "sidebar.CTF.category.Ethernaut": {
+    "message": "Ethernaut",
+    "description": "The label for category Ethernaut in sidebar CTF"
+  },
+  "sidebar.CTF.category.OZ2024": {
+    "message": "OZ2024",
+    "description": "The label for category OZ2024 in sidebar CTF"
+  },
+  "sidebar.CTF.category.Paradigm2021": {
+    "message": "Paradigm2021",
+    "description": "The label for category Paradigm2021 in sidebar CTF"
+  }
+}

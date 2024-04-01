@@ -7,28 +7,32 @@ sidebar_position: 1
 
 
 ## Update Record
+- 2024/4/1
+  - SignatureReply
+  - NFTReentrancy
+  - Access Control Vulnerability
 - 2024/3/29
   - What is Huff
   - What is Yul
   - DiveEVM-Stack
   - CallData
 - 2024/3/28
-  - Create2
+  - [Create2](https://kkweb3doc.vercel.app/solidity/Basic/Create2)
 - 2024/3/27
-  - BypassContractCheck
-  - Msg.value in a Loop
-  - UncheckedReturnValues
-  - Rounding-Errors
+  - [BypassContractCheck](https://kkweb3doc.vercel.app/security/BypassContractCheck)
+  - [Msg.value in a Loop](https://kkweb3doc.vercel.app/security/msg.value-in-a-Loop)
+  - [UncheckedReturnValues](https://kkweb3doc.vercel.app/security/UncheckedReturnValues)
+  - [Rounding-Errors](https://kkweb3doc.vercel.app/security/Rounding-Errors)
 - 2024/3/25
-  - FlashLoan
+  - [FlashLoan](https://kkweb3doc.vercel.app/solidity/Application/FlashLoan)
 - 2024/3/24
-  - How To Defi
-  - Check Effect Pattern
-  - Events
+  - [How To Defi](https://kkweb3doc.vercel.app/solidity/Defi/HowToDefi)
+  - [Check Effect Pattern](https://kkweb3doc.vercel.app/solidity/Basic/Check-effects)
+  - [Events](https://kkweb3doc.vercel.app/solidity/Basic/Events)
 - 2024/3/23
-  - Weak Random
-  - DDos Attack
-  - Solidity-Basic_DataLocation
+  - [Weak Random](https://kkweb3doc.vercel.app/security/WeakRandom)
+  - [DDos Attack](https://kkweb3doc.vercel.app/security/DDos)
+  - [Solidity-Basic_DataLocation](https://kkweb3doc.vercel.app/solidity/Basic/DataLocation)
 - 2024/3/20
   - [Tools-Foundry_Test](https://kkweb3doc.vercel.app/Web3tools/Foundry/Test)
   - [Solidity-Application_MultiSigWallet](https://kkweb3doc.vercel.app/solidity/Application/MultiWallet)
