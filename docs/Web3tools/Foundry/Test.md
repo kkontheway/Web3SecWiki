@@ -48,3 +48,8 @@ function setUp() public {
 Refer:https://twitter.com/RightNowIn/status/1761094201071002000
 
 https://rareskills.io/post/invariant-testing-solidity
+https://twitter.com/DevDacian/status/1732269870014992761
+https://twitter.com/DevDacian/status/1758068540756881845
+https://twitter.com/DevDacian/status/1732645103867773236
+https://twitter.com/DevDacian/status/1747565664506909178
+https://twitter.com/DevDacian/status/1733009929508917499
