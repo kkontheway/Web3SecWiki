@@ -8,6 +8,7 @@ sidebar_position: 1
 
 ## Update Record
 - 2024/4/2
+  - Selfie
   - Proxy Attack(Update)
   - Basic EVM
   - Reentrancy
