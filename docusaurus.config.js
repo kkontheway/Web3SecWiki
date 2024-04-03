@@ -112,6 +112,12 @@ const config = {
             position: "left",
           },
           {
+            type: "docSidebar",
+            label: "Recurrence",
+            sidebarId: "Recurrence",
+            position: "left",
+          },
+          {
             href: 'https://github.com/kkontheway/SolidityNote',
             label: 'GitHub',
             position: 'right',
