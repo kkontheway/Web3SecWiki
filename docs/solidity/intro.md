@@ -7,6 +7,11 @@ sidebar_position: 1
 
 
 ## Update Record
+- 2024/4/7
+  - EIP712
+  - Signature Attack
+  - Puppet V2
+  - Wallet
 - 2024/4/2
   - Selfie
   - Proxy Attack(Update)
