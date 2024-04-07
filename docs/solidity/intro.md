@@ -12,6 +12,7 @@ sidebar_position: 1
   - Signature Attack
   - Puppet V2
   - Wallet
+  - MasterFoundry(Update)
 - 2024/4/2
   - Selfie
   - Proxy Attack(Update)
