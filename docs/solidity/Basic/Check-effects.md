@@ -1,5 +1,5 @@
 ---
-title: Check-Effects
+title: CEI Pattern
 ---
 
 # Check-Effect
@@ -34,3 +34,6 @@ contract ChecksEffectsInteractionsPattern {
 }
 ```
 在上面的代码中，合约首先检查调用者是否有足够的余额进行转账，接着在状态变量中更改相应的余额，并最后执行外部调用来完成转账。按照这种顺序，即使在进行外部调用并导致控制流程返回到合约时发生了更多的函数调用（例如，通过重入攻击），合约状态已经更新，从而降低了安全风险。
+
+# Refer
+https://docs.soliditylang.org/en/latest/security-considerations.html#use-the-checks-effects-interactions-pattern

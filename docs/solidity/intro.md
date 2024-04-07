@@ -13,6 +13,7 @@ sidebar_position: 1
   - Puppet V2
   - Wallet
   - MasterFoundry(Update)
+  - Function Selector
 - 2024/4/2
   - Selfie
   - Proxy Attack(Update)
