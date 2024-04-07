@@ -14,6 +14,8 @@ sidebar_position: 1
   - Wallet
   - MasterFoundry(Update)
   - Function Selector
+  - Signature
+  - EIP-712
 - 2024/4/2
   - Selfie
   - Proxy Attack(Update)
@@ -24,7 +26,6 @@ sidebar_position: 1
   - metadata
   - What is ABI ?
 - 2024/4/1
-  - SignatureReply
   - Inheritance
   - NFTReentrancy
 - 2024/3/29
