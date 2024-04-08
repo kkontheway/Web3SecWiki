@@ -7,9 +7,11 @@ sidebar_position: 1
 
 
 ## Update Record
+- 2024/4/8
+  - EthernautDao-Switch
 - 2024/4/7
   - EIP712
-  - Signature Attack
+  - SignatureReply
   - Puppet V2
   - Wallet
   - MasterFoundry(Update)
