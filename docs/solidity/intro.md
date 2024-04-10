@@ -7,6 +7,9 @@ sidebar_position: 1
 
 
 ## Update Record
+- 2024/4/10
+  - Abi Hash Collisions
+  - Paradigm2023-100%
 - 2024/4/9
   - Fork
   - ERC4626-Update
