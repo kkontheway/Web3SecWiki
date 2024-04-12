@@ -113,5 +113,11 @@ function testColor() public {
 7. Enter the password you set
 8. Finished
 
+### 4.Check support for any opcode on any chain
+Use:
+```
+cast call --rpc-url <RPC_URL> --create <OPCODE>
+```
+It will return 0x if supported, and an error if the opcode is not supported yet.
 ## Refer
 https://twitter.com/TheBlockChainer/status/1727309850810392771
