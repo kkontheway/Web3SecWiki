@@ -7,6 +7,10 @@ sidebar_position: 1
 
 
 ## Update Record
+- 2024/4/14
+  - Paradigm2023-DAI++
+  - Paradigm2023-Dodont
+  - ExpertFoundry(Update)
 - 2024/4/10
   - Abi Hash Collisions
   - Paradigm2023-100%
