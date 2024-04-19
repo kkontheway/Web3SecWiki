@@ -7,6 +7,8 @@ sidebar_position: 1
 
 
 ## Update Record
+- 2024/4/19
+  - Rounding-Errors(update)
 - 2024/4/14
   - Paradigm2023-DAI++
   - Paradigm2023-Dodont
