@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '@theme/Layout'
 import Hero from './_components/Hero'
-import BlogSection from './_components/BlogSection'
+//import BlogSection from './_components/BlogSection'
 import FeaturesSection from './_components/FeaturesSection'
 import ProjectSection from './_components/ProjectSection'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
@@ -17,9 +17,9 @@ export default function Home(): JSX.Element {
       <main>
         <Hero />
         <div className="container-wrapper">
-          <BlogSection />
-          <ProjectSection />
-          <FeaturesSection />
+          {/* <BlogSection /> */}
+          {/* <ProjectSection />
+          <FeaturesSection /> */}
         </div>
       </main>
     </Layout>

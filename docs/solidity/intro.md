@@ -1,7 +1,7 @@
 ---
 slug: /solidity
 id: introduction
-title: Solidity
+title: 0.solidity
 ---
 ## About
 

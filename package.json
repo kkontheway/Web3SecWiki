@@ -2,15 +2,15 @@
   "name": "blog",
   "version": "3.0.0",
   "author": {
-    "url": "https://github.com/kuizuo",
-    "email": "hi@kuizuo.cn",
-    "name": "愧怍"
+    "url": "https://github.com/kkontheway",
+    "email": "suchaprettyboi1227@gmail.com",
+    "name": "KKontheway"
   },
   "repository": {
-    "url": "https://github.com/kuizuo/blog",
+    "url": "https://github.com/kkontheway/SolidityNote",
     "type": "git"
   },
-  "homepage": "https://kuizuo.cn",
+  "homepage": "https://kkweb3doc.vercel.app/",
   "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",

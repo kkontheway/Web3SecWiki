@@ -4,14 +4,14 @@ import { themes } from 'prism-react-renderer'
 import { GiscusConfig } from './src/components/Comment'
 import social from './data/social'
 
-const beian = '闽ICP备2020017848号-2'
-const beian1 = '闽公网安备35021102000847号'
+// const beian = '闽ICP备2020017848号-2'
+// const beian1 = '闽公网安备35021102000847号'
 
 const config: Config = {
   title: 'Web3SecWiki',
   url: 'https://kkweb3doc.vercel.app/',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
   organizationName: 'Web3SecWiki',
   projectName: 'blog',
   customFields: {
@@ -45,17 +45,17 @@ const config: Config = {
     },
     navbar: {
       logo: {
-        alt: '愧怍',
-        src: 'img/logo.webp',
-        srcDark: 'img/logo.webp',
+        alt: 'KKontheway',
+        src: 'img/logo.png',
+        srcDark: 'img/logo.png',
       },
       hideOnScroll: true,
       items: [
-        {
-          label: '博客',
-          position: 'right',
-          to: 'blog',
-        },
+        // {
+        //   label: '博客',
+        //   position: 'right',
+        //   to: 'blog',
+        // },
         {
           label: 'Solidity',
           position: 'left',
@@ -87,62 +87,7 @@ const config: Config = {
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: '学习',
-          items: [
-            { label: '博客', to: 'blog' },
-            { label: '归档', to: 'blog/archive' },
-            { label: '技术笔记', to: 'docs/ctf' },
-            { label: '实战项目', to: 'project' },
-            { label: '前端示例', to: 'https://example.kuizuo.cn' },
-          ],
-        },
-        {
-          title: '社交媒体',
-          items: [
-            { label: '关于我', to: '/about' },
-            { label: 'GitHub', href: social.github.href },
-            { label: 'Twitter', href: social.twitter.href },
-            { label: '掘金', href: social.juejin.href },
-            { label: 'Discord', href: social.discord.href },
-          ],
-        },
-        {
-          title: '网站',
-          items: [
-            { label: 'js反混淆', to: 'https://js-deobfuscator.kuizuo.cn' },
-            { label: 'cyberChef', to: 'https://gchq.github.io/CyberChef' },
-            { label: 'api服务', to: 'https://api.kuizuo.cn' },
-            { label: '便民服务', to: 'https://service.kuizuo.cn' },
-            { label: '站点监控', to: 'https://uptime.kuizuo.cn' },
-          ],
-        },
-        {
-          title: '更多',
-          items: [
-            { label: '友链', position: 'right', to: 'friends' },
-            { label: '导航', position: 'right', to: 'resources' },
-            {
-              html: `
-                <a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener">
-                  <img src="/img/buildwith.png" alt="build with docusaurus" width="120" height="50"/>
-                <a/>
-                `,
-            },
-          ],
-        },
-      ],
-      copyright: `
-        <p style="margin-bottom: 0;"><a href="http://beian.miit.gov.cn/">${beian}</a></p>
-        <p style="display: inline-flex; align-items: center;"><img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${
-          beian1.match(/\d+/)?.[0]
-        }" >${beian1}</a></p>
-        <p>Copyright © 2020 - PRESENT 愧怍 Built with Docusaurus.</p>
-        `,
-    },
+
     algolia: {
       appId: 'GV6YN1ODMO',
       apiKey: '50303937b0e4630bec4a20a14e3b7872',
@@ -243,34 +188,14 @@ const config: Config = {
         mode: 'auto',
       },
     ],
-    [
-      './src/plugin/plugin-content-blog', // 为了实现全局 blog 数据，必须改写 plugin-content-blog 插件
-      {
-        path: 'blog',
-        editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/kuizuo/blog/edit/main/${blogDirPath}/${blogPath}`,
-        editLocalizedFiles: false,
-        blogDescription: '代码人生：编织技术与生活的博客之旅',
-        blogSidebarCount: 10,
-        blogSidebarTitle: 'Blogs',
-        postsPerPage: 10,
-        showReadingTime: true,
-        readingTime: ({ content, frontMatter, defaultReadingTime }) =>
-          defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
-        feedOptions: {
-          type: 'all',
-          title: '愧怍',
-          copyright: `Copyright © ${new Date().getFullYear()} 愧怍 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
-        },
-      },
-    ],
+  
   ],
   headTags: [
     {
       tagName: 'meta',
       attributes: {
         name: 'description',
-        content: '愧怍的个人博客',
+        content: 'Web3SecWiki',
       },
     },
   ],
