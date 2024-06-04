@@ -1,6 +1,7 @@
 ---
-slug: /
-sidebar_position: 1
+slug: /solidity
+id: introduction
+title: Solidity
 ---
 ## About
 
