@@ -1,1 +1,0 @@
-https://www.rareskills.io/post/erc20-votes-erc5805-and-erc6372
