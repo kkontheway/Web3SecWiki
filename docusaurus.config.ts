@@ -82,6 +82,11 @@ const config: Config = {
           to: 'docs/web3tools',
         },
         {
+          label: 'resources',
+          position: 'right',
+          to: 'resources',
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
         },
