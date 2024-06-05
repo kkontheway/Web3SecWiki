@@ -121,3 +121,8 @@ cast call --rpc-url <RPC_URL> --create <OPCODE>
 It will return 0x if supported, and an error if the opcode is not supported yet.
 ## Refer
 https://twitter.com/TheBlockChainer/status/1727309850810392771
+
+### 5.Deploy different version
+---
+Use Deploycode
+![](https://pbs.twimg.com/media/F5V11FcXoAAwvB3?format=jpg&name=medium)
