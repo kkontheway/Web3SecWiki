@@ -1,7 +1,7 @@
 ---
-title: MultisigWallet
+title: 3.MultisigWallet
 ---
-# 什么是MultisigWallet
+# 3.什么是MultisigWallet
 
 多签钱包是一种电子钱包，特点是交易需要被多个私钥持有者同意后才能进行。
 多签钱包可以防止单点故障，更加的去中心化更加的安全。

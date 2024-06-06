@@ -58,31 +58,31 @@ const config: Config = {
         // },
         {
           label: 'Solidity',
-          position: 'left',
+          position: 'right',
           to: 'docs/solidity',
         },
         {
           label: 'Security',
-          position: 'left',
+          position: 'right',
           to: 'docs/security',
         },
         {
           label: 'CTF',
-          position: 'left',
+          position: 'right',
           to: 'docs/ctf',
         },
         {
           label: 'Recurrence',
-          position: 'left',
+          position: 'right',
           to: 'docs/recurrence',
         },
         {
           label: 'Web3Tools',
-          position: 'left',
+          position: 'right',
           to: 'docs/web3tools',
         },
         {
-          label: 'resources',
+          label: 'Resources',
           position: 'right',
           to: 'resources',
         },
