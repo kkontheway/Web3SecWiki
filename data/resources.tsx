@@ -261,4 +261,16 @@ export const resourceData: ResourceCategory[] = [
         },
         ],
     },
+    {
+      name: 'Misc',
+      resources: [
+        {
+          name: 'Loom',
+          desc: 'For Screen Record',
+          logo:'https://pbs.twimg.com/profile_images/1499889556941803523/LBloppPQ_400x400.jpg',
+          href: 'https://www.loom.com/',
+          tags: [],
+        },
+      ],
+  },
 ]

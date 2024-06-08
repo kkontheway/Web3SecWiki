@@ -40,7 +40,7 @@ function Name() {
         e.currentTarget.style.setProperty('--y', `${e.clientY}px`)
       }}
     >
-      <Translate id="homepage.hero.greet">你好! 我是</Translate>
+      <Translate id="homepage.hero.greet">HI! Welcome to </Translate>
       <span
         className={styles.name}
         onMouseMove={e => {
@@ -49,7 +49,7 @@ function Name() {
           e.currentTarget.style.setProperty('--mouse-y', `${bounding.y}px`)
         }}
       >
-        <Translate id="homepage.hero.name">KK</Translate>
+        <Translate id="homepage.hero.name">Web3 Security Wiki</Translate>
       </span>
       <span className={styles.wave}>👋</span>
     </motion.div>
