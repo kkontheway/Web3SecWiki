@@ -59,7 +59,13 @@ const config: Config = {
         {
           label: 'Solidity',
           position: 'right',
-          to: 'docs/solidity',
+          items: [
+            { label: 'Solidity 101', to: 'docs/Basic' },
+            { label: 'EVM 101', to: 'docs/EVM' },
+            { label: 'Application', to: 'docs/application' },
+            { label: 'EIP&ERC', to: 'docs/EIP&ERC' },
+            { label: 'Proxy', to: 'docs/Proxy' },
+          ],
         },
         {
           label: 'Security',
