@@ -57,7 +57,7 @@ const config: Config = {
         //   to: 'blog',
         // },
         {
-          label: 'Solidity',
+          label: 'Basics',
           position: 'right',
           items: [
             { label: 'Solidity 101', to: 'docs/Basic' },
@@ -65,6 +65,7 @@ const config: Config = {
             { label: 'Application', to: 'docs/application' },
             { label: 'EIP&ERC', to: 'docs/EIP&ERC' },
             { label: 'Proxy', to: 'docs/Proxy' },
+            { label: 'Huff', to: 'docs/Huff' },
           ],
         },
         {
