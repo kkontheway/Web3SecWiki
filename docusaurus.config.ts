@@ -66,6 +66,7 @@ const config: Config = {
             { label: 'EIP&ERC', to: 'docs/EIP&ERC' },
             { label: 'Proxy', to: 'docs/Proxy' },
             { label: 'Huff', to: 'docs/Huff' },
+            { label: 'Defi', to: 'docs/Defi'}
           ],
         },
         {
