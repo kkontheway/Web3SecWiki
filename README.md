@@ -63,7 +63,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -177,7 +176,6 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -186,7 +184,6 @@ Don't forget to give the project a star! Thanks again!
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -194,10 +191,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 KK - [@kkontheway](https://twitter.com/zzzkkk12355)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
