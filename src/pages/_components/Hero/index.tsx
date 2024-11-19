@@ -40,7 +40,7 @@ function Name() {
         e.currentTarget.style.setProperty('--y', `${e.clientY}px`)
       }}
     >
-      <Translate id="homepage.hero.greet">HI! Welcome to </Translate>
+      <Translate id="homepage.hero.greet">HI! Welcome to This message is used to verify that this feed (feedId:81626068512389120) belongs to me (userId:46794329661251584). Join me in enjoying the next generation information browser https://follow.is. </Translate>
       <span
         className={styles.name}
         onMouseMove={e => {
